@@ -1,11 +1,8 @@
-your name
-beetlejuice
+tu nombre
 interstellar
-the godfather
 el bueno el malo y el feo
 requiem
 sweeney todd
-bohemian rhapsody
 kill bill volumen uno
 el quinto elemento
 sangre sudor y gloria
@@ -17,10 +14,6 @@ los locos addams
 mentes peligrosas
 psicosis
 los cazafantasmas
-howl moving castle
-the truman show
-edge of tomorrow
-blade runner 2049
+el show de truman
 oppenheimer
-pulp fiction
 ted

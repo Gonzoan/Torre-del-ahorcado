@@ -4,11 +4,9 @@ gladiador
 el rey leon
 mad max
 inception
-mad max
 aladdin
-pult fiction
-avengers
-jurassic park
+los vengadores
+parque jurasico
 la monja
 bastardos sin gloria
 forrest gump
@@ -16,9 +14,6 @@ sangre por sangre
 el padrino
 los increibles
 sangre de campeones
-scarface
-american psycho
 batman
 predator
-whiplash
 el caballero oscuro
