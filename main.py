@@ -13,10 +13,10 @@ if seleccion == 0:
 if seleccion == 1:
 
     selector = SelectorTema()
-    categoria = selector.SeleccionTematicas()
+    categoria = selector.SeleccionTematicas() #funcion para selecciónar las tematicas, viene de MenuSeleccionTema.py
 
     SelectorIdioma = SelectorIdioma()
-    Idioma = SelectorIdioma.SeleccionIdioma(categoria)
+    Idioma = SelectorIdioma.SeleccionIdioma(categoria) #funcion para seleccionar el idioma, tambien viene de MenuSeleccionTema.py
 
     juego = Ahorcado()
     juego.cargar_palabras(categoria, 1,Idioma)

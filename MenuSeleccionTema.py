@@ -35,12 +35,13 @@ class SelectorTema:
         return categoria_seleccionada
 
 class SelectorIdioma:
-    # Función Selector de idioma:
+
+    # Función para seleccionar el idioma
     def SeleccionIdioma(self,categoria):
         # Buscar todas las carpetas dentro de "palabras"
         self.Idioma = [
             carpeta.name  # es una funcion de Path para extraer el nombre de un archivo o carpeta
-            for carpeta in Path(f"palabras/{categoria}/").iterdir()
+            for carpeta in Path(f"palabras/{categoria}/").iterdir() #se abre desde la carpeta de la categoria anteriormente seleccionada
             # Path abre la carpeta palabras e iterdir recorre lo que se encuentra adentro
             if carpeta.is_dir()  # is.dir revisa si el archivo que selecciono es carpeta o no
         ]
