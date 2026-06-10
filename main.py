@@ -19,7 +19,7 @@ if seleccion == 1:
     Idioma = SelectorIdioma.SeleccionIdioma(categoria) #funcion para seleccionar el idioma, tambien viene de MenuSeleccionTema.py
 
     juego = Ahorcado()
-    juego.cargar_palabras(categoria, 1,Idioma)
+    juego.cargar_palabras(categoria, 1,Idioma) #llama la logica de selección de las palabras
     print(juego.palabra) #prueba de que si sirva la función y la muestre en consola
 
 
