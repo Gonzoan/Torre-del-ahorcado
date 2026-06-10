@@ -8,12 +8,12 @@ class Ahorcado:
         self.nivel = 1
         self.palabra = ""
         self.vida = 6
-    def cargar_palabras(self, categoria, nivel):
+    def cargar_palabras(self, categoria, nivel, idioma):
     
         self.categoria = categoria  
         self.nivel = nivel
     
-        ruta = f"palabras/{categoria}/nivel{nivel}.txt"
+        ruta = f"palabras/{categoria}/{idioma}/nivel{nivel}.txt"
     
         with open(ruta, "r", encoding="utf-8") as archivo:
             palabras = archivo.read().splitlines()

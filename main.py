@@ -1,5 +1,5 @@
 from juego import Ahorcado
-from MenuSeleccionTema import SelectorTema
+from MenuSeleccionTema import SelectorTema, SelectorIdioma
 
 seleccion = 0
 
@@ -15,8 +15,11 @@ if seleccion == 1:
     selector = SelectorTema()
     categoria = selector.SeleccionTematicas()
 
+    SelectorIdioma = SelectorIdioma()
+    Idioma = SelectorIdioma.SeleccionIdioma(categoria)
+
     juego = Ahorcado()
-    juego.cargar_palabras(categoria, 1)
+    juego.cargar_palabras(categoria, 1,Idioma)
     print(juego.palabra) #prueba de que si sirva la función y la muestre en consola
 
 
