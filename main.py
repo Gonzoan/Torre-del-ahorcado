@@ -41,6 +41,7 @@ if seleccion == 1:
         if juego.vida == 0:
             #Si se quedo sin vidas, ya se acaba todo el juego
             print(f"Fin del juego. Te quedaste en el nivel {nivel_actual}")
+            victoria_total = False
             break
 
         if nivel_actual < 5:
@@ -48,4 +49,6 @@ if seleccion == 1:
             input("Presiona Enter para continuar")
 
     if victoria_total:
-        print("Pasaste todos los niveles del ahorcado")
+        print("=======================================================")
+        print("Enhorabuena!! Pasaste todos los niveles del ahorcado!!")
+        print("=======================================================")

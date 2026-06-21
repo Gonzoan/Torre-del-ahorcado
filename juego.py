@@ -69,11 +69,13 @@ class Ahorcado:
             #Comprueba que la letra sea solo una y no acepta frases largas
             if len(letra_jugador) != 1 or not letra_jugador.isalpha():
                 print("Letra no valida, por favor vuelva a introducir la letra")
+                print("="*35)
                 continue
 
             #Si se ingresa una letra ya introducidad anterior mente se le da otra oportunidad
             if letra_jugador in self.letras_intentadas:
                 print(f"Ya intentaste esta letra antes")
+                print("="*35)
                 continue
 
             #Se agrega la letra nueva a la lista
@@ -87,6 +89,7 @@ class Ahorcado:
                 #Si falla la animacion cambia
                 print("Fallaste!!")
                 self.vida -= 1
+            print("="*35)
         #Si no pierde todas las vidas pada al siguiete nivel
         if self.vida > 0:
             print(Animacion_muneco(9 - self.vida))
@@ -95,3 +98,6 @@ class Ahorcado:
             #Pierde totalmente
             print(Animacion_muneco(9))
             print(f"Has sido ahorcado en el nivel {self.nivel}.\nLa palabra era: {self.palabra}")
+            print("======================")
+            print("     GAME OVER!!")
+            print("======================")
