@@ -12,6 +12,8 @@ print("""
 nombre_jugador = input("Escriba su nombre para empezar: ")
 print(f"\n¡Bienvenido, {nombre_jugador}!\n")
 
+modo = input("Seleccione modo de juego (normal / extremo): ").lower()
+
 selector = SelectorTema()
 categoria = selector.SeleccionTematicas()
 
@@ -19,6 +21,7 @@ selector_idioma = SelectorIdioma()
 Idioma = selector_idioma.SeleccionIdioma(categoria)
 
 juego = Ahorcado()
+juego.modo = modo
 #juego.cargar_palabras(categoria, 1,Idioma) #llama la logica de selección de las palabras
 #print(juego.palabra) #prueba de que si sirva la función y la muestre en consola
 

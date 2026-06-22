@@ -11,6 +11,7 @@ class Ahorcado:
         self.vida = 9
         self.letras_adivinadas = []
         self.letras_intentadas = []
+        self.modo = "normal"
 
     def cargar_palabras(self, categoria, nivel, idioma):
     
@@ -26,7 +27,9 @@ class Ahorcado:
         #Resetea todas las listas para el siguiente nivel
         self.letras_adivinadas = []
         self.letras_intentadas = []
-        self.vida = 9
+
+        if self.modo == "normal":
+            self.vida = 9
 
         #Algunas palabras tienen espacios, se agregan de una vez
         if " " in self.palabra:
