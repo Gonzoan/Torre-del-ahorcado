@@ -4,15 +4,15 @@ from pathlib import Path
 ARCHIVO = "resultados.xlsx"
 
 
-def guardar_o_actualizar_resultado(nombre, puntaje):
+def guardar_o_actualizar_resultado(nombre, puntaje, modo, categoria):
 
-    # Si el archivo ya existe, lo cargamos
+    # Si el archivo existe, lo cargamos
     if Path(ARCHIVO).exists():
         df = pd.read_excel(ARCHIVO)
     else:
-        df = pd.DataFrame(columns=["Usuario", "Puntaje"])
+        df = pd.DataFrame(columns=["Usuario", "Puntaje", "Dificultad", "Categoria"])
 
-    # Si el usuario ya existe, actualiza su puntaje (si es mayor)
+    # Si el usuario ya existe
     if nombre in df["Usuario"].values:
 
         indice = df[df["Usuario"] == nombre].index[0]
@@ -20,13 +20,19 @@ def guardar_o_actualizar_resultado(nombre, puntaje):
         # Solo actualiza si el nuevo puntaje es mayor
         if puntaje > df.at[indice, "Puntaje"]:
             df.at[indice, "Puntaje"] = puntaje
+            df.at[indice, "Dificultad"] = modo
+            df.at[indice, "Categoria"] = categoria
 
     else:
-        # Agrega nuevo usuario
-        nueva_fila = pd.DataFrame([[nombre, puntaje]], columns=["Usuario", "Puntaje"])
+        # Crear nueva fila
+        nueva_fila = pd.DataFrame(
+            [[nombre, puntaje, modo, categoria]],
+            columns=["Usuario", "Puntaje", "Dificultad", "Categoria"]
+        )
+
         df = pd.concat([df, nueva_fila], ignore_index=True)
 
-    # Ordenar de mayor a menor puntaje
+    # Ordenar ranking por puntaje
     df = df.sort_values(by="Puntaje", ascending=False)
 
     # Guardar en Excel

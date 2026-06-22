@@ -70,7 +70,7 @@ print(f"PUNTAJE FINAL: {puntaje_total}")
 print("="*35)
 
 # Guardar o actualizar en Excel
-tabla = guardar_o_actualizar_resultado(nombre_jugador, puntaje_total)
+tabla = guardar_o_actualizar_resultado(nombre_jugador, puntaje_total, modo, categoria)
 
 print("\n" + "="*40)
 print("TABLA DE PUNTAJES")
